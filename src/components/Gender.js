@@ -1,24 +1,25 @@
 import React from 'react';
 import './submit.css';
 
-const Gender = ({onChange,onSubmit}) => {
+const Gender = ({onClick}) => {
+
+	let genders=[{gen:"Male"},{gen:"Female"}];
+
+	const genderRegion = genders.map((el,i) => (
+		<li key={i}>
+			<button onClick={onClick.bind(null,el.gen)}>
+				{el.gen}
+			</button>
+		</li>
+	));
+
 	return(
 		<div>
-            <div >
-				What is your recipient's gender?
-				<form onSubmit={onSubmit}>
-					<input type="text" onChange={onChange}/>
-					<button>Submit</button>
-				</form>
+			What is your recipient's gender?
+			<ul>
+				{genderRegion}
+			</ul>
 
-				<div class="sex">
-                    <img class="male" draggable="false" src="src/components/asset/93.png"/>
-						<p>Male</p>
-                    <img class="female" draggable="false" src=""/>
-                        <p>Female</p>
-				</div>
-
-            </div>
 		</div>
 	)
 };

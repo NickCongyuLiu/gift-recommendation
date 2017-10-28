@@ -4,14 +4,30 @@
 
 import React from 'react';
 
-const Age = ({onChange,onSubmit}) => {
+const Age = ({onClick}) => {
+    let ageRange=[{age:"child"},{age:"teenager"},{age:"mid-age"},{age:"senior"}];
+
+    const ageRegion = ageRange.map((el,i) => (
+        <li key={i}>
+            <div>
+                <button onClick={onClick.bind(null,el.age)}>
+                    {el.age}
+                </button>
+            </div>
+
+        </li>
+
+        )
+    );
+
+
     return(
         <div>
             What is your recipient's age?
-            <form onSubmit={onSubmit}>
-                <input type="text" onChange={onChange}/>
-                <button>Submit</button>
-            </form>
+            <ul>
+                {ageRegion}
+            </ul>
+
         </div>
     )
 };

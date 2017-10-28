@@ -6,7 +6,6 @@ import Relationship from './components/Relationship';
 import './index.css';
 
 export default class App extends React.Component{
-
 	componentWillMount(){
 		this.setState({
 			gender: "",
@@ -14,73 +13,43 @@ export default class App extends React.Component{
 			age: "",
 			renderAge: false,
 			rel: "",
-			renderRel:false,
-			input:""
+			renderRel:false
 		})
 	};
 
-	onGenderChange = (event) => {
+	onGenderClick = (gender) => {
+		event.preventDefault();
 		this.setState(
 			{
-				input:event.target.value
-			}
-		)
-	};
-
-	onGenderSubmit = (event) => {
-		event.preventDefault();
-		this.setState((prevState)=>(
-			{
-				gender: prevState.input,
+				gender: gender,
 				renderGender:false,
 				renderAge: true
 			}
-			)
 		)
 	};
 
-	onAgeChange = (event) => {
+
+
+	onAgeClick = (age) => {
+		event.preventDefault();
 		this.setState(
 			{
-				input:event.target.value
-			}
-		)
-	};
-
-	onAgeSubmit = (event) => {
-		event.preventDefault();
-		this.setState((prevState)=>(
-			{
-				age: prevState.input,
+				age: age,
 				renderAge:false,
 				renderRel: true
 			}
-			)
 		)
 	};
 
-	onRelChange = (event) => {
+	onRelClick = (rel) => {
+		event.preventDefault();
 		this.setState(
 			{
-				input:event.target.value
-			}
-		)
-	};
-
-	onRelSubmit = (event) => {
-		event.preventDefault();
-		this.setState((prevState)=>(
-			{
-				relationship: prevState.input,
+				relationship: rel,
 				renderRel:false,
 			}
-			)
 		)
 	};
-
-
-
-
 
 	render(){
         var colors = new Array(
@@ -144,12 +113,12 @@ export default class App extends React.Component{
 
         setInterval(updateGradient,10);
 
+
 		return(
 			<div>
 				{ this.state.renderGender ?
 					<Gender
-					onChange={this.onGenderChange}
-					onSubmit={this.onGenderSubmit}
+					onClick={this.onGenderClick}
 					/>
 					: null
 				}
@@ -157,21 +126,20 @@ export default class App extends React.Component{
 
 				{ this.state.renderAge ?
 					<Age
-						onChange={this.onAgeChange}
-						onSubmit={this.onAgeSubmit}
+						onClick={this.onAgeClick}
 					/>
 					: null
 				}
 
 				{ this.state.renderRel ?
 					<Relationship
-						onChange={this.onRelChange}
-						onSubmit={this.onRelSubmit}
+						onClick={this.onRelClick}
 					/>
 					: null
 				}
+
 				{ !this.state.renderGender && !this.state.renderRel && !this.state.renderAge ?
-					<h1> my {this.state.relationship} is a {this.state.age} year-old {this.state.gender}</h1>
+					<h1> my {this.state.relationship} is a {this.state.age} {this.state.gender}</h1>
 					: null
 				}
         	</div>
