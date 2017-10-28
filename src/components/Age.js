@@ -11,10 +11,9 @@ const Age = ({onClick}) => {
 
     const ageRegion = ageRange.map((el,i) => (
         <li key={i}>
-                <button className="ageSelection" id="ageSelection" onClick={onClick.bind(null,el.age)}>
-                    {el.age}
-                </button>
-
+            <button className="ageSelection" id="ageSelection" onClick={onClick.bind(null,el.age)}>
+                {el.age}
+            </button>
         </li>
 
         )
@@ -27,7 +26,6 @@ const Age = ({onClick}) => {
             <ul id="ul_buttons2">
                 {ageRegion}
             </ul>
-
         </div>
     )
 };

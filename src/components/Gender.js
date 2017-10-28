@@ -19,7 +19,6 @@ const Gender = ({onClick}) => {
 			<ul id="ul_buttons">
 				{genderRegion}
 			</ul>
-
 		</div>
 	)
 };
