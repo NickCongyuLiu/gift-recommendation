@@ -2,6 +2,7 @@
  * Created by bowenjiang on 10/28/17.
  */
 import React from 'react';
+import './../style/style.css'
 
 const Relationship = ({onClick}) => {
 
@@ -20,7 +21,7 @@ const Relationship = ({onClick}) => {
     return(
         <div>
             What is your relationship with your recipient?
-            <ul>
+            <ul id="ul_buttons">
                 {relRegion}
             </ul>
         </div>

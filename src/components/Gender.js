@@ -1,5 +1,5 @@
 import React from 'react';
-import './submit.css';
+import './../style/style.css';
 
 const Gender = ({onClick}) => {
 
@@ -16,10 +16,9 @@ const Gender = ({onClick}) => {
 	return(
 		<div>
 			What is your recipient's gender?
-			<ul>
+			<ul id="ul_buttons">
 				{genderRegion}
 			</ul>
-
 		</div>
 	)
 };
