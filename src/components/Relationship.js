@@ -3,14 +3,26 @@
  */
 import React from 'react';
 
-const Relationship = ({onChange,onSubmit}) => {
+const Relationship = ({onClick}) => {
+
+    let relType = [{rel: "Significant other"},{rel: "Friend"},{rel:"Family member"},
+        {rel:"Someone from work"},{rel:"I could f**king kill him"}];
+
+    const relRegion = relType.map((el,i)=>(
+        <li key={i}>
+            <button onClick={onClick.bind(null,el.rel)}>
+                {el.rel}
+            </button>
+        </li>
+    ));
+
+
     return(
         <div>
             What is your relationship with your recipient?
-            <form onSubmit={onSubmit}>
-                <input type="text" onChange={onChange}/>
-                <button>Submit</button>
-            </form>
+            <ul>
+                {relRegion}
+            </ul>
         </div>
     )
 };
