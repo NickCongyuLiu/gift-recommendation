@@ -1,5 +1,5 @@
 import React from 'react';
-import './submit.css';
+import './gender.css';
 
 const Gender = ({onClick}) => {
 
@@ -7,7 +7,7 @@ const Gender = ({onClick}) => {
 
 	const genderRegion = genders.map((el,i) => (
 		<li key={i}>
-			<button onClick={onClick.bind(null,el.gen)}>
+			<button className="genderRegion" id="genderRegion" onClick={onClick.bind(null,el.gen)}>
 				{el.gen}
 			</button>
 		</li>
@@ -15,8 +15,8 @@ const Gender = ({onClick}) => {
 
 	return(
 		<div>
-			What is your recipient's gender?
-			<ul>
+            <div className="genderStatement"> What is your recipient's gender?</div>
+			<ul id="ul_buttons">
 				{genderRegion}
 			</ul>
 

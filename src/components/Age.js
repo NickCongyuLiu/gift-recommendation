@@ -3,17 +3,17 @@
  */
 
 import React from 'react';
+import './age.css';
+
 
 const Age = ({onClick}) => {
     let ageRange=[{age:"child"},{age:"teenager"},{age:"mid-age"},{age:"senior"}];
 
     const ageRegion = ageRange.map((el,i) => (
         <li key={i}>
-            <div>
-                <button onClick={onClick.bind(null,el.age)}>
+                <button className="ageSelection" id="ageSelection" onClick={onClick.bind(null,el.age)}>
                     {el.age}
                 </button>
-            </div>
 
         </li>
 
@@ -23,8 +23,8 @@ const Age = ({onClick}) => {
 
     return(
         <div>
-            What is your recipient's age?
-            <ul>
+            <div className="ageStatement"> What is your recipient's age?</div>
+            <ul id="ul_buttons2">
                 {ageRegion}
             </ul>
 
