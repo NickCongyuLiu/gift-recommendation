@@ -1,23 +1,23 @@
 #app{
 }
 
-.relationStatement{
+.budgetStatement{
     font: 20px "Century Gothic", Futura,sans-serif;
     font-weight:bold;
     margin:0 auto;
-    width:460px;
+    width:300px;
 }
 
-#ul_buttons3 li {
+#ul_buttons4 li {
     margin:0 auto;
-
+    display: inline;
 }
 
-.relationSelection{
+.budgetSelection{
     border: 1px solid red;
     margin-top:10%;
     width:100px;
     height:100px;
-    margin-left:14%;
+    margin-left:12%;
     border-radius: 50%;
 }

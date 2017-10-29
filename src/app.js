@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import Gender from './components/Gender';
 import Age from './components/Age';
 import Relationship from './components/Relationship';
-import {updateGradient} from './style/background'
+import Budget from './components/Budget';
+import {updateGradient} from './style/background';
 
 export default class App extends React.Component{
 	componentWillMount(){
@@ -13,7 +14,9 @@ export default class App extends React.Component{
 			age: "",
 			renderAge: false,
 			rel: "",
-			renderRel:false
+			renderRel:false,
+            budget:"",
+            renderBudget:false
 		})
 	};
 
@@ -50,12 +53,23 @@ export default class App extends React.Component{
 			{
 				rel: rel,
 				renderRel:false,
-			},
-			()=>{
-				this.startRequest();
+                renderBudget:true
 			}
 		);
 	};
+
+    onBudgetClick = (budget) => {
+        event.preventDefault();
+        this.setState(
+            {
+                budget: budget,
+                renderBudget:false
+            },
+            ()=>{
+            this.startRequest();
+            }
+        )
+    };
 
 	startRequest(){
 
@@ -92,6 +106,13 @@ export default class App extends React.Component{
 					/>
 					: null
 				}
+
+                { this.state.renderBudget ?
+                    <Budget
+                        onClick={this.onBudgetClick}
+                    />
+                    : null
+                }
 
         	</div>
 		)
