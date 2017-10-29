@@ -1,5 +1,5 @@
 import React from 'react';
-import './gender.css';
+import '../style/gender.css';
 
 const Gender = ({onClick}) => {
 

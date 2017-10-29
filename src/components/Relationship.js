@@ -2,7 +2,7 @@
  * Created by bowenjiang on 10/28/17.
  */
 import React from 'react';
-import './relationship.css';
+import '../style/relationship.css';
 
 const Relationship = ({age,gender,onClick}) => {
     let relType = [{}];

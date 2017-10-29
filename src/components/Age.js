@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import './age.css';
+import '../style/age.css';
 import '../style/style.css'
 
 
