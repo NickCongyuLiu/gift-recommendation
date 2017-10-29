@@ -1,0 +1,23 @@
+#app{
+}
+
+.ageStatement{
+    font: 20px "Century Gothic", Futura,sans-serif;
+    font-weight:bold;
+    margin:auto;
+    width:400px;
+}
+
+#ul_buttons2 li {
+    margin:0 auto;
+    display: inline;
+}
+
+.ageSelection{
+    border: 1px solid red;
+    margin-top:10%;
+    width:100px;
+    height:100px;
+    margin-left:12%;
+    border-radius: 50%;
+}

@@ -12,7 +12,7 @@ export default class App extends React.Component{
 			renderGender: true,
 			age: "",
 			renderAge: false,
-			relationship: "",
+			rel: "",
 			renderRel:false
 		})
 	};
@@ -43,12 +43,12 @@ export default class App extends React.Component{
 
 
 
-	onRelClick = (relationship) => {
+	onRelClick = (rel) => {
 		event.preventDefault();
 
 		this.setState(
 			{
-				relationship: relationship,
+				rel: rel,
 				renderRel:false,
 			}
 		);

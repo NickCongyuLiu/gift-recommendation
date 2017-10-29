@@ -1,0 +1,22 @@
+#app{
+}
+
+.genderStatement{
+    font: 20px "Century Gothic", Futura,sans-serif;
+    font-weight:bold;
+    margin:auto;
+    width:400px;
+}
+
+#ul_buttons li {
+    display: inline;
+}
+
+.genderRegion{
+    border: 1px solid red;
+    margin-top:10%;
+    width:100px;
+    height:100px;
+    margin-left:25%;
+    border-radius: 50%;
+}

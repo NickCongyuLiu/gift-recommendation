@@ -2,19 +2,19 @@
  * Created by bowenjiang on 10/28/17.
  */
 import React from 'react';
-import './../style/style.css'
+import './relationship.css';
 
 const Relationship = ({onClick}) => {
 
 
 
-    let relType = [{relationship: "Significant other"},{relationship: "Friend"},{relationship:"Family member"},
-        {relationship:"Someone from work"},{relationship:"I could f**king kill him"}];
+    let relType = [{rel: "Significant other"},{rel: "Friend"},{rel:"Family member"},
+        {rel:"Someone from work"},{rel:"I could f**king kill him"}];
 
     const relRegion = relType.map((el,i)=>(
         <li key={i}>
-            <button onClick={onClick.bind(null,el.relationship)}>
-                {el.relationship}
+            <button className="relationSelection" id="relationSelection" onClick={onClick.bind(null,el.rel)}>
+                {el.rel}
             </button>
         </li>
     ));
@@ -22,8 +22,8 @@ const Relationship = ({onClick}) => {
 
     return(
         <div>
-            What is your relationship with your recipient?
-            <ul id="ul_buttons">
+            <div className="relationStatement"> What is your relationship with your recipient?</div>
+            <ul id="ul_buttons3">
                 {relRegion}
             </ul>
         </div>
