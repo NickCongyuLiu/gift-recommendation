@@ -6,6 +6,8 @@ import './relationship.css';
 
 const Relationship = ({onClick}) => {
 
+
+
     let relType = [{rel: "Significant other"},{rel: "Friend"},{rel:"Family member"},
         {rel:"Someone from work"},{rel:"I could f**king kill him"}];
 

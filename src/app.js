@@ -41,14 +41,17 @@ export default class App extends React.Component{
 		)
 	};
 
+
+
 	onRelClick = (rel) => {
 		event.preventDefault();
+
 		this.setState(
 			{
-				relationship: rel,
+				rel: rel,
 				renderRel:false,
 			}
-		)
+		);
 	};
 
 
@@ -81,10 +84,6 @@ export default class App extends React.Component{
 					: null
 				}
 
-				{ !this.state.renderGender && !this.state.renderRel && !this.state.renderAge ?
-					<h1> my {this.state.relationship} is a {this.state.age} {this.state.gender}</h1>
-					: null
-				}
         	</div>
 		)
 	}

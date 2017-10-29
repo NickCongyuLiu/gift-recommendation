@@ -1723,7 +1723,7 @@ var App = function (_React$Component) {
 		}, _this.onRelClick = function (rel) {
 			event.preventDefault();
 			_this.setState({
-				relationship: rel,
+				rel: rel,
 				renderRel: false
 			});
 		}, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
@@ -1812,7 +1812,7 @@ var App = function (_React$Component) {
 					'h1',
 					null,
 					' my ',
-					this.state.relationship,
+					this.state.rel,
 					' is a ',
 					this.state.age,
 					' ',
@@ -23091,7 +23091,7 @@ var Relationship = function Relationship(_ref) {
     return _react2.default.createElement(
         "div",
         null,
-        "What is your relationship with your recipient?",
+        "What is your rel with your recipient?",
         _react2.default.createElement(
             "ul",
             null,
