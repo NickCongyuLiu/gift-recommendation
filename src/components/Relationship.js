@@ -42,20 +42,20 @@ const Relationship = ({age,gender,onClick}) => {
 
 
     const relRegion = relType.map((el,i)=>(
-        <li key={i}>
+        <div key={i}>
             <button className="relationSelection" id="relationSelection" onClick={onClick.bind(null,el.rel)}>
                 {el.rel}
             </button>
-        </li>
+        </div>
     ));
 
 
     return(
         <div>
             <div className="relationStatement"> What is your relationship with your recipient?</div>
-            <ul id="ul_buttons3">
+            <div id="ul_buttons3">
                 {relRegion}
-            </ul>
+            </div>
         </div>
     )
 };
