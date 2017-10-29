@@ -10093,7 +10093,7 @@ var possibleStandardNames$1 = {
   radiogroup: 'radioGroup',
   readonly: 'readOnly',
   referrerpolicy: 'referrerPolicy',
-  rel: 'rel',
+  relationship: 'relationship',
   required: 'required',
   reversed: 'reversed',
   role: 'role',
@@ -23082,8 +23082,8 @@ var Relationship = function Relationship(_ref) {
             { key: i },
             _react2.default.createElement(
                 "button",
-                { onClick: onClick.bind(null, el.rel) },
-                el.rel
+                { onClick: onClick.bind(null, el.relationship) },
+                el.relationship
             )
         );
     });
@@ -23439,7 +23439,7 @@ function createLinkElement (options) {
 	var link = document.createElement("link");
 
 	options.attrs.type = "text/css";
-	options.attrs.rel = "stylesheet";
+	options.attrs.relationship = "stylesheet";
 
 	addAttrs(link, options.attrs);
 	insertStyleElement(options, link);
