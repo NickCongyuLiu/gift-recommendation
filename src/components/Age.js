@@ -8,7 +8,7 @@ import '../style/style.css'
 
 
 const Age = ({onClick}) => {
-    let ageRange=[{age:"child"},{age:"teenager"},{age:"mid-age"},{age:"senior"}];
+    let ageRange=[{age:"Child"},{age:"Teenager"},{age:"Mid-age"},{age:"Senior"}];
 
     const ageRegion = ageRange.map((el,i) => (
         <li key={i}>

@@ -50,8 +50,15 @@ export default class App extends React.Component{
 			{
 				rel: rel,
 				renderRel:false,
+			},
+			()=>{
+				this.startRequest();
 			}
 		);
+	};
+
+	startRequest(){
+
 	};
 
 
@@ -79,6 +86,8 @@ export default class App extends React.Component{
 
 				{ this.state.renderRel ?
 					<Relationship
+						gender={this.state.gender}
+						age={this.state.age}
 						onClick={this.onRelClick}
 					/>
 					: null

@@ -4,12 +4,42 @@
 import React from 'react';
 import './relationship.css';
 
-const Relationship = ({onClick}) => {
+const Relationship = ({age,gender,onClick}) => {
+    let relType = [{}];
+
+    if (gender=="Male"){
+        switch(age){
+            case "Child":
+                relType = [{rel:"Baby boy"},{rel:"Boy already?"}];
+                break;
+            case "Mid-age":
+                relType = [{rel:"Father"},{rel:"Husband"},{rel: "Friend"},{rel: "Someone from work"}];
+                break;
+            case "Teenager":
+                relType = [{rel: "Son"},{rel: "Boyfriend"},{rel: "Friend"}];
+                break;
+            case "Senior":
+                relType = [{rel: "Grandad"},{rel: "Family member"}];
+                break;
+        }
+    } else if(gender=="Female") {
+        switch (age) {
+            case "Child":
+                relType = [{rel: "Baby girl"}, {rel: "Girl already?"}];
+                break;
+            case "Mid-age":
+                relType = [{rel: "Mother"}, {rel: "Wife"}, {rel: "Friend"}, {rel: "Someone from work"}];
+                break;
+            case "Teenager":
+                relType = [{rel: "Daughter"}, {rel: "Girlfriend"}, {rel: "Friend"}];
+                break;
+            case "Senior":
+                relType = [{rel: "Grandma"}, {rel: "Family member"}];
+                break;
+        }
+    }
 
 
-
-    let relType = [{rel: "Significant other"},{rel: "Friend"},{rel:"Family member"},
-        {rel:"Someone from work"},{rel:"I could f**king kill him"}];
 
     const relRegion = relType.map((el,i)=>(
         <li key={i}>
