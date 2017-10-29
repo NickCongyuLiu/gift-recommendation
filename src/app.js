@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import Gender from './components/Gender';
 import Age from './components/Age';
 import Relationship from './components/Relationship';
-import {updateGradient} from './style/background'
+import {updateGradient} from './style/background';
+import amazon from 'amazon-product-api';
 
 export default class App extends React.Component{
 	componentWillMount(){
@@ -58,6 +59,19 @@ export default class App extends React.Component{
 	};
 
 	startRequest(){
+		var client = amazon.createClient({
+			awsID: "351892172173",
+			awsSecret: "Wa1X2E33bWbXRWIEHcv7f8o4uOp41AjC9A2v62wu"
+		});
+
+		client.itemLookup({
+			idType: 'UPC',
+			itemId: '884392579524'
+		}).then(function(results) {
+			console.log(JSON.stringify(results));
+		}).catch(function(err) {
+			console.log(err);
+		});
 
 	};
 
