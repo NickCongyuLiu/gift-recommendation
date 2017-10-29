@@ -4,6 +4,7 @@
 
 import React from 'react';
 import './age.css';
+import '../style/style.css'
 
 
 const Age = ({onClick}) => {
