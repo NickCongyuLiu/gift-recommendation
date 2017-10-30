@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom';
 import Gender from './components/Gender';
 import Age from './components/Age';
 import Relationship from './components/Relationship';
-<<<<<<< HEAD
 import {updateGradient} from './style/background';
-import amazon from 'amazon-product-api';
-=======
 import Budget from './components/Budget';
-import {updateGradient} from './style/background';
->>>>>>> ab56561a752c59e9c610c325d172376396132047
+import ebay from 'ebay-api';
+import request from 'request';
+
 
 export default class App extends React.Component{
 	componentWillMount(){
@@ -77,19 +75,6 @@ export default class App extends React.Component{
     };
 
 	startRequest(){
-		var client = amazon.createClient({
-			awsID: "351892172173",
-			awsSecret: "Wa1X2E33bWbXRWIEHcv7f8o4uOp41AjC9A2v62wu"
-		});
-
-		client.itemLookup({
-			idType: 'UPC',
-			itemId: '884392579524'
-		}).then(function(results) {
-			console.log(JSON.stringify(results));
-		}).catch(function(err) {
-			console.log(err);
-		});
 
 	};
 
