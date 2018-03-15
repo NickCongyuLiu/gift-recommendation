@@ -1,0 +1,23 @@
+#app{
+}
+
+.budgetStatement{
+    font: 20px "Century Gothic", Futura,sans-serif;
+    font-weight:bold;
+    margin:0 auto;
+    width:300px;
+}
+
+#ul_buttons4 li {
+    margin:0 auto;
+    display: inline;
+}
+
+.budgetSelection{
+    border: 1px solid red;
+    margin-top:10%;
+    width:100px;
+    height:100px;
+    margin-left:12%;
+    border-radius: 50%;
+}

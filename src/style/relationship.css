@@ -1,0 +1,23 @@
+#app{
+}
+
+.relationStatement{
+    font: 20px "Century Gothic", Futura,sans-serif;
+    font-weight:bold;
+    margin:0 auto;
+    width:430px;
+}
+
+#ul_buttons3 {
+    margin:0 auto;
+
+}
+
+.relationSelection{
+    border: 1px solid red;
+    margin-top:4%;
+    width:35%;
+    height:80px;
+    margin-left:35%;
+    border-radius: 100px;
+}
