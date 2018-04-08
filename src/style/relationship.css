@@ -4,8 +4,8 @@
 .relationStatement{
     font: 20px "Century Gothic", Futura,sans-serif;
     font-weight:bold;
-    margin:0 auto;
-    width:430px;
+    width:100%;
+    margin-left: 33%;
 }
 
 #ul_buttons3 {
@@ -16,8 +16,8 @@
 .relationSelection{
     border: 1px solid red;
     margin-top:4%;
-    width:500px;
+    width:33%;
     height:80px;
-    margin-left:35%;
+    margin-left:33%;
     border-radius: 100px;
 }

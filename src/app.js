@@ -5,6 +5,7 @@ import Age from './components/Age';
 import Relationship from './components/Relationship';
 import {updateGradient} from './style/background';
 import Budget from './components/Budget';
+import Result from './components/Result';
 import ebay from 'ebay-api';
 import request from 'request';
 
@@ -19,7 +20,9 @@ export default class App extends React.Component{
 			rel: "",
 			renderRel:false,
             budget:"",
-            renderBudget:false
+            renderBudget:false,
+			result:"",
+			renderResult:false
 		})
 	};
 
@@ -66,17 +69,33 @@ export default class App extends React.Component{
         this.setState(
             {
                 budget: budget,
-                renderBudget:false
-            },
-            ()=>{
-            this.startRequest();
+                renderBudget:false,
+				renderResult:true
             }
         )
     };
 
-	startRequest(){
 
-	};
+
+	// startRequest=(budget)=>{
+	// 	event.preventDefault();
+	// 	this.setState(
+	// 		{
+	// 			budget:budget,
+	// 			renderResult:true
+	// 		}
+    //
+	// 	);
+    //
+    //
+    //
+	// };
+	startRequest(budget){
+		console.log(budget);
+		console.log(this.state.rel);
+	}
+
+
 
 
 
@@ -112,11 +131,21 @@ export default class App extends React.Component{
 
                 { this.state.renderBudget ?
                     <Budget
+						budget={this.state.budget}
                         onClick={this.onBudgetClick}
                     />
                     : null
                 }
 
+                {this.state.renderResult ?
+
+					<Result
+                        budget={this.state.budget}
+                        relationship = {this.state.rel}
+					/>
+                    : null
+
+                }
         	</div>
 		)
 	}

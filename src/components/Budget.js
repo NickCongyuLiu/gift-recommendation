@@ -1,6 +1,4 @@
-/**
- * Created by Congyu Liu on 10/28/17.
- */
+
 
 import React from 'react';
 import '../style/budget.css';
@@ -12,13 +10,14 @@ const Budget = ({onClick}) => {
 
     const budgetRegion = budgetRange.map((el,i) => (
             <li key={i}>
-                <button className="budgetSelection" id="budgetSelection" onClick={onClick.bind(null,el.age)}>
+                <button className="budgetSelection" id="budgetSelection" onClick={onClick.bind(null,el.budget)}>
                     {el.budget}
                 </button>
             </li>
 
         )
     );
+
 
 
     return(

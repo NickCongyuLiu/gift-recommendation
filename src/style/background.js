@@ -1,6 +1,4 @@
-/**
- * Created by bowenjiang on 10/28/17.
- */
+
 
 import React from 'react';
 import $ from "jquery";

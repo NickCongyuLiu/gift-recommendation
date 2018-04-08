@@ -1,5 +1,5 @@
 {
-  "name": "bostonhack",
+  "name": "giftapp",
   "version": "1.0.0",
   "description": "A webapp to help you to select gifts",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --hot --inline --colors --content-base ./build",
     "build": "webpack --progress --colors"
   },
-  "author": "Bowen Jiang, Congyu Liu, Zhengchen Sun",
+  "author": "Congyu Liu",
   "license": "ISC",
   "dependencies": {
     "amazon-product-api": "^0.4.4",
@@ -37,6 +37,6 @@
     "webpack-dev-server": "^2.9.3"
   },
   "repository": {
-    "type": "https://github.com/BowenJiangUBC/gift-app.git"
+    "type": "https://github.com/NickCongyuLiu/gift-app.git"
   }
 }

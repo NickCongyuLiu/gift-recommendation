@@ -1,7 +1,3 @@
-/**
- * Created by bowenjiang on 10/28/17.
- */
-
 import React from 'react';
 import '../style/age.css';
 import '../style/style.css'

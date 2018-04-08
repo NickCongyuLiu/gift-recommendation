@@ -1,6 +1,3 @@
-/**
- * Created by bowenjiang on 10/28/17.
- */
 import React from 'react';
 import '../style/relationship.css';
 
@@ -8,9 +5,10 @@ const Relationship = ({age,gender,onClick}) => {
     let relType = [{}];
 
     if (gender=="Male"){
+        console.log(gender);
         switch(age){
             case "Child":
-                relType = [{rel:"Baby boy"},{rel:"Boy already?"}];
+                relType = [{rel:"Baby boy"},{rel:"Young Boy"}];
                 break;
             case "Mid-age":
                 relType = [{rel:"Father"},{rel:"Husband"},{rel: "Friend"},{rel: "Someone from work"}];
@@ -25,7 +23,7 @@ const Relationship = ({age,gender,onClick}) => {
     } else if(gender=="Female") {
         switch (age) {
             case "Child":
-                relType = [{rel: "Baby girl"}, {rel: "Girl already?"}];
+                relType = [{rel: "Baby girl"}, {rel: "Young Girl"}];
                 break;
             case "Mid-age":
                 relType = [{rel: "Mother"}, {rel: "Wife"}, {rel: "Friend"}, {rel: "Someone from work"}];
@@ -52,7 +50,7 @@ const Relationship = ({age,gender,onClick}) => {
 
     return(
         <div>
-            <div className="relationStatement"> What is your relationship with your recipient?</div>
+            <div className="relationStatement"> What is the relationship with your recipient?</div>
             <div id="ul_buttons3">
                 {relRegion}
             </div>
